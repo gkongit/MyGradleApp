@@ -8,19 +8,27 @@ pipeline {
 	
 	stages {
 		stage('Checkout') {
-			git branch: 'main', url: 'https://github.com/gkongit/MyGradleApp.git'
+			steps {
+				git branch: 'main', url: 'https://github.com/gkongit/MyGradleApp.git'
+			}
 		}
 		
 		stage('Build') {
-			sh 'gradle build'
+			steps {
+				sh 'gradle build'
+			}
 		}
 		
 		stage('Run') {
-			sh 'gradle run'
+			steps {
+				sh 'gradle run'
+			}
 		}
 		
 		stage('Display') {
-			sh 'gradle display'
+			steps {
+				sh 'gradle display'
+			}
 		}
 	}	
 }
