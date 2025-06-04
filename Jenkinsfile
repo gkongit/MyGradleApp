@@ -8,7 +8,7 @@ pipeline {
 	
 	stages {
 		stage('Checkout') {
-			git branch: 'main', url: ''
+			git branch: 'main', url: 'https://github.com/gkongit/MyGradleApp.git'
 		}
 		
 		stage('Build') {
